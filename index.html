@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Bros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen active">
+        <div class="loading-content">
+            <h1 class="game-title">CHAOS BROS</h1>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <p class="loading-text">Loading Chaos...</p>
+        </div>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="main-menu" class="screen">
+        <div class="menu-bg-effects">
+            <div class="particle" style="--x: 10%; --y: 20%; --size: 4px;"></div>
+            <div class="particle" style="--x: 30%; --y: 60%; --size: 6px;"></div>
+            <div class="particle" style="--x: 50%; --y: 40%; --size: 3px;"></div>
+            <div class="particle" style="--x: 70%; --y: 80%; --size: 5px;"></div>
+            <div class="particle" style="--x: 90%; --y: 30%; --size: 4px;"></div>
+            <div class="particle" style="--x: 20%; --y: 70%; --size: 7px;"></div>
+            <div class="particle" style="--x: 60%; --y: 10%; --size: 3px;"></div>
+            <div class="particle" style="--x: 80%; --y: 50%; --size: 5px;"></div>
+        </div>
+        <div class="menu-content">
+            <h1 class="game-title" data-text="CHAOS BROS">CHAOS BROS</h1>
+            <p class="game-subtitle">The Unfair Platformer</p>
+            <div class="menu-buttons">
+                <button class="menu-btn primary" id="btn-start">
+                    <span class="btn-text">PLAY</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <button class="menu-btn secondary" id="btn-controls">
+                    <span class="btn-text">CONTROLS</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </div>
+            <div class="menu-footer">
+                <p>A Chaos Bros Production</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Select -->
+    <div id="character-select" class="screen">
+        <div class="menu-bg-effects">
+            <div class="particle" style="--x: 15%; --y: 25%; --size: 5px;"></div>
+            <div class="particle" style="--x: 45%; --y: 55%; --size: 4px;"></div>
+            <div class="particle" style="--x: 75%; --y: 35%; --size: 6px;"></div>
+            <div class="particle" style="--x: 25%; --y: 75%; --size: 3px;"></div>
+            <div class="particle" style="--x: 85%; --y: 65%; --size: 5px;"></div>
+        </div>
+        <div class="menu-content">
+            <h2 class="menu-title">CHOOSE YOUR CHAOS</h2>
+            <div class="character-cards">
+                <!-- Dwayne Card -->
+                <div class="character-card" data-character="dwayne">
+                    <div class="character-banner">
+                        <img src="Pasted Image 2.png" alt="The Rock" class="banner-image">
+                    </div>
+                    <div class="character-preview" id="dwayne-preview">
+                        <div class="character-body dwayne-char">
+                            <div class="char-head">
+                                <div class="char-eyebrow left"></div>
+                                <div class="char-eyebrow right raised"></div>
+                                <div class="char-eye left"></div>
+                                <div class="char-eye right"></div>
+                                <div class="char-mouth smirk"></div>
+                            </div>
+                            <div class="char-torso">
+                                <div class="char-arm left"></div>
+                                <div class="char-arm right"></div>
+                            </div>
+                            <div class="char-legs tiny"></div>
+                        </div>
+                    </div>
+                    <h3>THE ROCK</h3>
+                    <p class="character-desc">Fast & Powerful</p>
+                    <div class="ability-box">
+                        <span class="ability-key">E</span>
+                        <span class="ability-name">Rock Throw</span>
+                    </div>
+                    <button class="select-btn">SELECT</button>
+                </div>
+                <!-- Shaq Card -->
+                <div class="character-card" data-character="shaq">
+                    <div class="character-banner">
+                        <img src="Pasted Image.png" alt="Shaq" class="banner-image">
+                    </div>
+                    <div class="character-preview" id="shaq-preview">
+                        <div class="character-body shaq-char">
+                            <div class="char-head">
+                                <div class="char-eyebrow left"></div>
+                                <div class="char-eyebrow right"></div>
+                                <div class="char-eye left"></div>
+                                <div class="char-eye right"></div>
+                                <div class="char-mouth grin"></div>
+                            </div>
+                            <div class="char-torso">
+                                <div class="char-arm left"></div>
+                                <div class="char-arm right"></div>
+                                <div class="char-basketball"></div>
+                            </div>
+                            <div class="char-legs large"></div>
+                        </div>
+                    </div>
+                    <h3>SHAQ</h3>
+                    <p class="character-desc">Heavy & Tough</p>
+                    <div class="ability-box">
+                        <span class="ability-key">E</span>
+                        <span class="ability-name">Mega Dunk</span>
+                    </div>
+                    <button class="select-btn">SELECT</button>
+                </div>
+            </div>
+            <button class="menu-btn secondary back-btn" id="btn-back-menu">
+                <span class="btn-text">BACK</span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Controls Screen -->
+    <div id="controls-screen" class="screen">
+        <div class="menu-content">
+            <h2 class="menu-title">CONTROLS</h2>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <span class="control-key">← →</span>
+                    <span class="control-desc">Move Left / Right</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-key">SPACE</span>
+                    <span class="control-desc">Jump (Double Jump available)</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-key">E</span>
+                    <span class="control-desc">Special Ability</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-key">ESC</span>
+                    <span class="control-desc">Pause Menu</span>
+                </div>
+            </div>
+            <button class="menu-btn primary back-btn" id="btn-back-from-controls">
+                <span class="btn-text">BACK</span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-menu" class="screen">
+        <div class="menu-content">
+            <h2 class="menu-title">PAUSED</h2>
+            <div class="menu-buttons">
+                <button class="menu-btn primary" id="btn-resume">
+                    <span class="btn-text">RESUME</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <button class="menu-btn secondary" id="btn-restart">
+                    <span class="btn-text">RESTART LEVEL</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <button class="menu-btn secondary" id="btn-quit">
+                    <span class="btn-text">QUIT TO MENU</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Canvas Area -->
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud" class="hud">
+            <div class="hud-left">
+                <div class="hud-item">
+                    <span class="hud-icon">❤️</span>
+                    <span class="hud-value" id="hud-lives">3</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-icon">🪙</span>
+                    <span class="hud-value" id="hud-coins">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-value" id="hud-score">0</span>
+                </div>
+            </div>
+            <div class="hud-center">
+                <div class="hud-level" id="hud-level">LV. 1</div>
+                <div class="hud-progress-container">
+                    <div class="hud-progress" id="hud-progress"></div>
+                </div>
+            </div>
+            <div class="hud-right">
+                <div class="hud-ability" id="hud-ability">
+                    <span class="ability-icon">💥</span>
+                    <div class="ability-cooldown-bar">
+                        <div class="ability-cooldown-fill" id="ability-cooldown-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Messages -->
+        <div id="floating-messages"></div>
+
+        <!-- Boss Health Bar -->
+        <div id="boss-health-container" class="boss-health hidden">
+            <div class="boss-health-bar">
+                <div class="boss-health-fill" id="boss-health-fill"></div>
+            </div>
+            <span class="boss-name" id="boss-name">BOSS</span>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over" class="screen">
+            <div class="menu-content">
+                <h2 class="game-over-title">GAME OVER</h2>
+                <p class="game-over-message" id="game-over-message">Skill Issue</p>
+                <div class="game-over-stats">
+                    <p>Score: <span id="go-score">0</span></p>
+                    <p>Coins: <span id="go-coins">0</span></p>
+                    <p>Level: <span id="go-level">1-1</span></p>
+                </div>
+                <div class="menu-buttons">
+                    <button class="menu-btn primary" id="btn-retry">
+                        <span class="btn-text">TRY AGAIN</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                    <button class="menu-btn secondary" id="btn-quit-go">
+                        <span class="btn-text">QUIT</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Victory Screen -->
+        <div id="victory-screen" class="screen">
+            <div class="menu-content">
+                <h2 class="victory-title">VICTORY!</h2>
+                <p class="victory-message" id="victory-message">Certified Goober</p>
+                <div class="victory-stats">
+                    <p>Final Score: <span id="v-score">0</span></p>
+                    <p>Total Coins: <span id="v-coins">0</span></p>
+                </div>
+                <div class="menu-buttons">
+                    <button class="menu-btn primary" id="btn-play-again">
+                        <span class="btn-text">PLAY AGAIN</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
