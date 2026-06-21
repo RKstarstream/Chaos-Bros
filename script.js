@@ -4263,7 +4263,7 @@ class Game {
         const startPlat = this.levelManager.platforms.find(p => p.x === 0 && p.width >= 400);
         const groundY = startPlat ? startPlat.y : 580;
         const playerHeight = GameState.selectedCharacter === 'dwayne' ? 62 : 82;
-        this.player = new Player(100, groundY - playerHeight, GameState.selectedCharacter, this);
+        this.player = new Player(100, groundY - playerHeight - 50, GameState.selectedCharacter, this);
         // Snap player onto the starting platform below them
         for (const plat of this.levelManager.platforms) {
             if (plat.isLuckyBlock && !plat.replacedWithPlatform) continue;
